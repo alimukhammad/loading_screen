@@ -1,10 +1,5 @@
-/* 
-on click login button 
-load a colorful spinner
-*/
-
-.login-button:active::after,
-.register-button:active::after {
+.login-button.loading::after,
+.register-button.loading::after {
     content: "";
     display: inline-block;
     width: 20px;
@@ -13,6 +8,10 @@ load a colorful spinner
     border: 3px solid transparent;
     border-top-color: #ff0000;
     animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @keyframes spin {
@@ -24,7 +23,16 @@ load a colorful spinner
     }
 }
 
-/* 
-on click register button 
-load a colorful spinner
-*/
+.list{
+    display: inline-block;
+    list-style-type: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #ff0000;
+    /* animation: spin 1s linear infinite; */
+    padding: 20px;
+    position: left;
+    
+}

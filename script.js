@@ -1,9 +1,13 @@
 function login() {
   console.log('login clicked');
-  document.getElementsByClassName("loader")[0].style.display = "block";
+  document.querySelector('.login-button').addEventListener('click', function() {
+    this.classList.add('loading');
+});
 }
 
 function register() {
   console.log('Register clicked');
-  document.getElementsByClassName("loader")[0].style.display = "block";
+  document.querySelector('.register-button').addEventListener('click', function() {
+    this.classList.add('loading');
+});
 }
